@@ -13,24 +13,27 @@ body {
     --yves: rgb(0,47,167);
     --dark-yves: rgb(25, 19, 66);
 
-    background-color: var(--pale-burnt);
-    color: var(--yves);
+    background-color: var(--neutral);
+    color: var(--dark-yves);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: normal;
 }
 
 a:visited {
-    color: var(--yves);
+    color: var(--dark-yves);
 }
 
+/* header section */
+
 header {
+    background: rgba(214, 157, 109, 0.6);
     padding: 0;
     display: flex;
     justify-content: center;
     top: 0;
     height: 80px;
-    /* position: -webkit-sticky;
-    position: sticky; */
+    position: -webkit-sticky;
+    position: sticky;
 }
 
 header nav {
@@ -41,30 +44,24 @@ header nav {
 
 header nav h1 {
     font-weight: bold;
-    font-size: 36px;
-    color: var(--yves);
+    font-size: 2.1vw;
     margin: 0 20px;
     padding-left: 20px;
     text-align: end;
-    /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
 }
 
 .header-name {
-    border-right: 2px solid var(--yves);
+    border-right: 2px solid var(--pale-yves);
     display: flex;
     justify-content: flex-end;
 }
 
 .header-list {
-    border-left: 2px solid var(--yves);
+    border-left: 2px solid var(--pale-yves);
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 50px 25px 0;
-}
-
-header a {
-    text-decoration: none;
 }
 
 header nav ul {
@@ -78,15 +75,72 @@ header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
-    /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
 }
 
-.hero img {
-    position: relative;
+header a {
+    text-decoration: none;
+}
+
+/* hero background image */
+
+.hero {
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    /* display: flex;
-    justify-content: center; */
+
+    /* flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background adjustments */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* bio section  */
+
+.bio {
+    background: var(--neutral);
+    display: flex;
+    justify-content: center;
+}
+
+.bio-title {
+    /* background-color: rgba(184, 99, 68, 0.85); */
+    background-image: linear-gradient(90deg, var(--cushion), var(--burnt));
+    display: inline-block;
+    /* justify-content: flex-end;
+    align-items: center; */
+    width: 60%;
+    position: absolute;
+    text-align: right;
+    left: 5vw;
+    border-right: 4px solid var(--pale-yves);
+    padding: 240px 20px;
+}
+
+.bio-copy {
+    padding: 5vw 20vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 67vw;
+    letter-spacing: 1.8px;
+    line-height: 2;
+    color: var(--burnt);
+}
+
+/* work section */
+
+.work {
+    text-align: center;
+    top: 40px;
+    position: relative;
+    z-index: -1;
+}
+
+.work img {
+    width: 360px;
+    height: auto;
 }
